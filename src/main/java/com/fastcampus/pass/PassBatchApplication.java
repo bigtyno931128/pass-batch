@@ -14,18 +14,22 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.persistence.EntityManagerFactory;
+
 
 @SpringBootApplication
 public class PassBatchApplication {
 
 
 	private final JobBuilderFactory jobBuilderFactory;
-
 	private final StepBuilderFactory stepBuilderFactory;
+
+
 
 	public PassBatchApplication(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuilderFactory) {
 		this.jobBuilderFactory = jobBuilderFactory;
 		this.stepBuilderFactory = stepBuilderFactory;
+
 	}
 
 	@Bean
